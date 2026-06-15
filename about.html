@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeWed - About Coach Lovey</title>
+  <meta name="description" content="Learn about Coach Lovey's journey, combining 20 years of preventative care with relationship wellness techniques.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bio-quote {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -1px;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+
+    /* Timeline styling for journey details */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+      margin: 40px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: var(--hairline);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -29px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent-teal);
+      border: 3px solid var(--canvas);
+    }
+
+    .timeline-date {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-teal);
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+
+    /* Article Card structure */
+    .article-card {
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+
+    .article-card:hover h3 {
+      color: var(--accent-teal);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header>
+    <a href="index.html" class="logo" id="header-logo">
+      <img src="swan-logo.jpg" alt="WeWed Logo" style="width: 32px; height: 32px; margin-right: 4px; object-fit: contain;">
+      WeWed
+    </a>
+    <nav id="header-nav">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-ctas">
+        <a href="contact.html" class="btn-secondary">Sign In</a>
+        <a href="contact.html" class="btn-primary">Book Session</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 50vh; padding-bottom: 20px;">
+    <div class="hero-tag animate-on-scroll">The Voice Behind WeWed</div>
+    <h1 class="display-xl animate-on-scroll">Meet Coach Lovey</h1>
+    <p class="subhead animate-on-scroll">Applying preventative care systems to rebuild relational health, intimacy, and trust.</p>
+  </section>
+
+  <!-- Biography Section -->
+  <section class="section-container" style="padding-top: 0;">
+    <div class="grid-2">
+      <div class="animate-on-scroll">
+        <h2 class="display-md" style="margin-bottom: 24px;">My Journey to Relational Wellness</h2>
+        <div class="bio-quote">"My passion for relationships didn't come from a textbook—it came from my own upbringing."</div>
+        <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Growing up around constant fighting, I knew early on that I wanted something different for my life. During my season of singleness, I went on a mission to discover what it truly takes to build a thriving, healthy marriage.</p>
+        <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6; margin-bottom: 24px;">Along the way, I saw so many couples staying in unhappy, draining dynamics simply because they were afraid of change, even when they knew the situation was bad for them.</p>
+        <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6;">Combining my 20 years of professional background in preventative care with a lifetime of studying what makes love actually work, I help couples stop settling for the status quo. My gift is seeing and feeling what is left unsaid, peeling back the layers to speak up for the parts of your relationship that have been buried.</p>
+      </div>
+
+      <div class="animate-on-scroll" style="padding-left: 20px;">
+        <h3 class="display-md" style="font-size: 22px; margin-bottom: 20px;">Professional Timeline</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Preventative Care Focus</div>
+            <p style="color: var(--ink-muted); font-size: 14px; line-height: 1.5;">Accumulated 20 years of clinical and wellness experience focusing on prevention—fixing root behaviors before damage occurs.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Marriage & Family Studies</div>
+            <p style="color: var(--ink-muted); font-size: 14px; line-height: 1.5;">Dedicated research to structural family dynamics, conflict management, and healthy marital systems.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Establishment of WeWed</div>
+            <p style="color: var(--ink-muted); font-size: 14px; line-height: 1.5;">Created a bespoke Relational Wellness program combining prevention, maintenance, and intensive deep-dives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hear from Coach Lovey (Insights and Articles) -->
+  <section class="section-container" id="articles" style="border-top: 1px solid var(--hairline-soft);">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 class="display-xl animate-on-scroll">Hear from Coach Lovey</h2>
+      <p class="subhead animate-on-scroll" style="margin: 0 auto;">Actionable thoughts and strategies for protective relationship habits.</p>
+    </div>
+
+    <div class="grid-2">
+      <!-- Article 1 -->
+      <a href="contact.html" class="article-card card-surface card-spotlight-teal animate-on-scroll">
+        <div class="hero-tag" style="width: fit-content; margin-bottom: 16px;">Habits & Connection</div>
+        <h3 class="display-md" style="font-size: 24px; margin-bottom: 12px; transition: color 0.2s ease;">Daily Habits to Protect Your Connection</h3>
+        <p style="color: var(--ink-muted); font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Read quick, daily actionable insights to keep communication channels open, direct, and authentic across daily routines.</p>
+        <span style="color: var(--accent-teal); font-size: 14px; font-weight: 500;">Read Article →</span>
+      </a>
+
+      <!-- Article 2 -->
+      <a href="contact.html" class="article-card card-surface card-spotlight-yellow animate-on-scroll">
+        <div class="hero-tag" style="width: fit-content; margin-bottom: 16px;">Prevention Strategy</div>
+        <h3 class="display-md" style="font-size: 24px; margin-bottom: 12px; transition: color 0.2s ease;">Preventative Care vs. Damage Control</h3>
+        <p style="color: var(--ink-muted); font-size: 15px; line-height: 1.6; margin-bottom: 20px;">Why investing in your connection today saves hours of gridlocked conflict tomorrow. Discover the core of prevention mechanics.</p>
+        <span style="color: var(--accent-teal); font-size: 14px; font-weight: 500;">Read Article →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section-container" id="testimonials" style="border-top: 1px solid var(--hairline-soft);">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 class="display-xl animate-on-scroll">Relational Breakthroughs</h2>
+      <p class="subhead animate-on-scroll" style="margin: 0 auto;">Stories of couples who resolved gridlocked communication and protected their healing.</p>
+    </div>
+
+    <div class="grid-3">
+      <!-- Testimonial 1 -->
+      <div class="card-surface animate-on-scroll">
+        <p style="font-style: italic; line-height: 1.5; color: var(--ink-muted); margin-bottom: 24px;">"We felt stuck in a loop of arguments that kept repeating. Coach Lovey gave us specific tools to flat-track our frustrations before they became lumpy rugs."</p>
+        <div style="font-weight: 600; font-size: 14px;">Sarah & David</div>
+        <div style="color: var(--accent-teal); font-size: 12px; margin-top: 4px;">Couples Track Clients</div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="card-surface animate-on-scroll">
+        <p style="font-style: italic; line-height: 1.5; color: var(--ink-muted); margin-bottom: 24px;">"The Individual intensive sessions gave me clarity on my own boundaries. It enabled me to clean my communication before bringing it into couples work."</p>
+        <div style="font-weight: 600; font-size: 14px;">Michael K.</div>
+        <div style="color: var(--accent-teal); font-size: 12px; margin-top: 4px;">Individual Intensive Client</div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="card-surface animate-on-scroll">
+        <p style="font-style: italic; line-height: 1.5; color: var(--ink-muted); margin-bottom: 24px;">"Connecting with other couples in the group sessions showed us we weren't alone. We got to choose the advice that fit our life."</p>
+        <div style="font-weight: 600; font-size: 14px;">Elena & James</div>
+        <div style="color: var(--accent-teal); font-size: 12px; margin-top: 4px;">Group Cohort Alumni</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <a href="index.html" class="logo" id="footer-logo">
+          <img src="swan-logo.jpg" alt="WeWed Logo" style="width: 32px; height: 32px; margin-right: 4px; object-fit: contain;">
+          WeWed
+        </a>
+        <p>Relational prevention, maintenance, and intensive wellness coaching to protect your connection.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Prevention & Maintenance</a></li>
+          <li><a href="services.html">Communication Deep Dive</a></li>
+          <li><a href="services.html">Group Cohorts</a></li>
+          <li><a href="services.html">Store Collection</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">Coach Lovey</a></li>
+          <li><a href="about.html#articles">Insights & Articles</a></li>
+          <li><a href="about.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="contact.html">Book Session</a></li>
+          <li><a href="contact.html">General Inquiry</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 WeWed. All rights reserved.</div>
+      <div>Designed with Framer aesthetics.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

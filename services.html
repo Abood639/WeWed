@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>document.documentElement.classList.add('js')</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeWed - Coaching Services</title>
+  <meta name="description" content="Explore relational prevention, maintenance, intensive coaching, and group cohorts with Coach Lovey.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Service block visibility defaults */
+    .service-section {
+      margin-bottom: 80px;
+    }
+    
+    /* When js is active, we hide all but the active tab */
+    .js .service-section {
+      display: none;
+    }
+    
+    .js .service-section.active-service {
+      display: block;
+    }
+
+    .service-quote {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink-muted);
+      border-left: 2px stroke var(--accent-teal);
+      border-left: 2px solid var(--accent-teal);
+      padding-left: 20px;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    .price-value {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header>
+    <a href="index.html" class="logo" id="header-logo">
+      <img src="swan-logo.jpg" alt="WeWed Logo" style="width: 32px; height: 32px; margin-right: 4px; object-fit: contain;">
+      WeWed
+    </a>
+    <nav id="header-nav">
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-ctas">
+        <a href="contact.html" class="btn-secondary">Sign In</a>
+        <a href="contact.html" class="btn-primary">Book Session</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 50vh; padding-bottom: 20px;">
+    <div class="hero-tag animate-on-scroll">Coaching Tracks & Tools</div>
+    <h1 class="display-xl animate-on-scroll">Relational Wellness Services</h1>
+    <p class="subhead animate-on-scroll">Peel back the layers, clear the lumpy rug, and choose a path that fits your relationship.</p>
+  </section>
+
+  <!-- Service Tab Switcher -->
+  <div class="section-container" style="padding-top: 0;">
+    <div class="pricing-tabs animate-on-scroll" id="service-tabs-container">
+      <button class="pricing-tab active" data-target="prevention-maintenance">Prevention & Maintenance</button>
+      <button class="pricing-tab" data-target="communication-dive">Communication Deep Dive</button>
+      <button class="pricing-tab" data-target="group-cohorts">Group Cohorts</button>
+      <button class="pricing-tab" data-target="tools-store">Tools Collection</button>
+    </div>
+
+    <!-- Prevention & Maintenance Block -->
+    <div class="service-section active-service" id="prevention-maintenance">
+      <div class="animate-on-scroll">
+        <h2 class="display-md" style="margin-bottom: 20px;">Block 1: Relational Prevention & Maintenance (Regular Coaching)</h2>
+        <p class="service-quote">"Even when you move past a rough patch, the lingering soreness can still weigh on you—prevention gives you 'a better way to fight' so you can stop old patterns before they occur again. Maintenance is about actively protecting the healing you have achieved, giving you the tools to maintain a healthy balance of life, work, stress, and daily routines so you stay securely on a positive path forward."</p>
+      </div>
+      
+      <div class="grid-2">
+        <!-- Individual Track -->
+        <div class="card-surface card-spotlight-teal animate-on-scroll">
+          <div class="hero-tag" style="width: fit-content; margin-bottom: 16px;">Individual Track</div>
+          <h3 class="display-md" style="font-size: 24px; margin-bottom: 12px;">Individual Track</h3>
+          <p style="color: var(--ink-muted); font-size: 15px; margin-bottom: 24px; line-height: 1.5;">Establish healthy personal communication patterns, process stress triggers, and prepare tools to manage daily relationship dynamics.</p>
+          <div style="margin-bottom: 30px;">
+            <span class="price-value">$85</span>
+            <span style="color: var(--ink-muted); font-size: 14px;">/ Session</span>
+            <div style="font-size: 13px; color: var(--accent-teal); margin-top: 8px;">6-Session Package Available for $510</div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="width: 100%;">Schedule a Session</a>
+        </div>
+
+        <!-- Couples Track -->
+        <div class="card-surface card-spotlight-yellow animate-on-scroll">
+          <div class="hero-tag" style="width: fit-content; margin-bottom: 16px;">Couples Track</div>
+          <h3 class="display-md" style="font-size: 24px; margin-bottom: 12px;">Couples Track</h3>
+          <p style="color: var(--ink-muted); font-size: 15px; margin-bottom: 24px; line-height: 1.5;">Joint sessions to align on work-life boundaries, navigate conflict constructively, and actively maintain a secure, balanced partnership.</p>
+          <div style="margin-bottom: 30px;">
+            <span class="price-value">$150</span>
+            <span style="color: var(--ink-muted); font-size: 14px;">/ Session</span>
+            <div style="font-size: 13px; color: var(--accent-teal); margin-top: 8px;">6-Session Package Available for $900</div>
+          </div>
+          <a href="contact.html" class="btn-primary" style="width: 100%;">Schedule a Session</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Communication Deep Dive Block -->
+    <div class="service-section" id="communication-dive">
+      <div class="animate-on-scroll">
+        <h2 class="display-md" style="margin-bottom: 20px;">Block 2: The Communication Deep Dive (Intensive Coaching)</h2>
+        <p class="service-quote">"Designed for couples who are stuck in arguments and struggling to agree because someone is carrying a heavy backlog of unspoken hurt. When frustrations get swept under the rug for too long, the rug gets lumpy—and eventually, one small argument unloads everything you’ve been storing. Your feelings are entirely valid, but this intensive deep dive gives you a fast-tracked space to express them frequently and cleanly, flattening the rug so you can finally feel understood and move past the standstill."</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Individual Intensive -->
+        <div class="card-surface card-spotlight-teal animate-on-scroll">
+          <div class="hero-tag" style="width: fit-content; margin-bottom: 16px;">Individual Intensive</div>
+          <h3 class="display-md" style="font-size: 24px; margin-bottom: 12px;">Individual Intensive</h3>
+          <p style="color: var(--ink-muted); font-size: 15px; margin-bottom: 24px; line-height: 1.5;">A focused, deep-dive session to untangle personal frustration, process complex baggage, and build clarity on your relational needs.</p>
+          <div style="margin-bottom: 30px;">
+            <span class="price-value">$170</span>
+            <span style="color: var(--ink-muted); font-size: 14px;">/ Session</span>
+          </div>
+          <a href="contact.html" class="btn-primary" style="width: 100%;">Book an Intensive</a>
+        </div>
+
+        <!-- Couples Intensive -->
+        <div class="card-surface card-spotlight-mix animate-on-scroll">
+          <div class="hero-tag" style="width: fit-content; margin-bottom: 16px;">Couples Intensive</div>
+          <h3 class="display-md" style="font-size: 24px; margin-bottom: 12px;">Couples Intensive</h3>
+          <p style="color: var(--ink-muted); font-size: 15px; margin-bottom: 24px; line-height: 1.5;">Fast-tracked, high-impact joint session to resolve gridlocked patterns, surface hidden resentments safely, and align on a path forward.</p>
+          <div style="margin-bottom: 30px;">
+            <span class="price-value">$300</span>
+            <span style="color: var(--ink-muted); font-size: 14px;">/ Session</span>
+          </div>
+          <a href="contact.html" class="btn-primary" style="width: 100%;">Book an Intensive</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Group Cohorts Block -->
+    <div class="service-section" id="group-cohorts">
+      <div class="animate-on-scroll">
+        <h2 class="display-md" style="margin-bottom: 20px;">Block 3: Intentional Communication Groups</h2>
+        <p class="service-quote">"Sometimes the best breakthroughs come from realizing you aren't alone. These inclusive, led group sessions provide a low-pressure space to connect with like-minded people, ask your burning questions, and get immediate answers from others navigating different stages of life. This collaborative environment gives you a diverse sounding board to feed off of, offering a menu of perspectives where you always have the complete freedom to take and apply only the advice that works for your life."</p>
+      </div>
+
+      <div style="max-width: 600px; margin: 0 auto;">
+        <div class="card-surface card-spotlight-yellow animate-on-scroll" style="text-align: center;">
+          <div class="hero-tag" style="width: fit-content; margin: 0 auto 16px auto;">Group Cohort</div>
+          <h3 class="display-md" style="font-size: 28px; margin-bottom: 12px;">Intentional Communication Groups</h3>
+          <p style="color: var(--ink-muted); font-size: 15px; margin-bottom: 30px; line-height: 1.5;">Low-pressure, weekly group discussions led by Coach Lovey. Connect, listen, share, and extract advice that resonates with your specific situation.</p>
+          <div style="margin-bottom: 30px;">
+            <span class="price-value">$40</span>
+            <span style="color: var(--ink-muted); font-size: 14px;">/ Person per Session</span>
+          </div>
+          <a href="contact.html" class="btn-primary">Join the Next Cohort Waitlist</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Store Collection Block -->
+    <div class="service-section" id="tools-store">
+      <div class="animate-on-scroll">
+        <h2 class="display-md" style="margin-bottom: 20px;">Block 4: Tools for Connection</h2>
+        <p class="service-quote">"You don't have to wait for our next session to keep doing the work. Bring the WeWed philosophy into your living room with curated tools designed to help you check in, clear the air, and protect your peace right at home."</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Communication Deck Couples -->
+        <div class="card-surface animate-on-scroll">
+          <div style="height: 120px; background: linear-gradient(135deg, var(--accent-teal), var(--accent-yellow)); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; font-weight: 600; letter-spacing: -0.5px;">Couples Deck</div>
+          <h3 class="display-md" style="font-size: 20px; margin-bottom: 12px;">Couples Connection Deck</h3>
+          <p style="color: var(--ink-muted); font-size: 14px; margin-bottom: 24px; line-height: 1.5;">Guided prompts to safely unpack what you've been holding onto and flatten the rug before the lump gets too heavy.</p>
+          <a href="contact.html" class="btn-secondary" style="width: 100%;">Shop Collection</a>
+        </div>
+
+        <!-- Communication Deck Women -->
+        <div class="card-surface animate-on-scroll">
+          <div style="height: 120px; background: linear-gradient(135deg, var(--accent-yellow), #ffffff); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; font-weight: 600; letter-spacing: -0.5px;">Women's Deck</div>
+          <h3 class="display-md" style="font-size: 20px; margin-bottom: 12px;">Women's Reflection Deck</h3>
+          <p style="color: var(--ink-muted); font-size: 14px; margin-bottom: 24px; line-height: 1.5;">An intentional space for personal reflection to explore feelings, find your voice, and express needs cleanly.</p>
+          <a href="contact.html" class="btn-secondary" style="width: 100%;">Shop Collection</a>
+        </div>
+
+        <!-- Room Sprays -->
+        <div class="card-surface animate-on-scroll">
+          <div style="height: 120px; background: linear-gradient(135deg, var(--accent-teal), #ffffff); border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; font-weight: 600; letter-spacing: -0.5px;">Signature Sprays</div>
+          <h3 class="display-md" style="font-size: 20px; margin-bottom: 12px;">Signature Room Sprays</h3>
+          <p style="color: var(--ink-muted); font-size: 14px; margin-bottom: 24px; line-height: 1.5;">A sensory reset perfect for clearing away heavy energy, calming the nervous system, and opening communication channels.</p>
+          <a href="contact.html" class="btn-secondary" style="width: 100%;">Shop Collection</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <a href="index.html" class="logo" id="footer-logo">
+          <img src="swan-logo.jpg" alt="WeWed Logo" style="width: 32px; height: 32px; margin-right: 4px; object-fit: contain;">
+          WeWed
+        </a>
+        <p>Relational prevention, maintenance, and intensive wellness coaching to protect your connection.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Prevention & Maintenance</a></li>
+          <li><a href="services.html">Communication Deep Dive</a></li>
+          <li><a href="services.html">Group Cohorts</a></li>
+          <li><a href="services.html">Store Collection</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>About</h4>
+        <ul>
+          <li><a href="about.html">Coach Lovey</a></li>
+          <li><a href="about.html#articles">Insights & Articles</a></li>
+          <li><a href="about.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="contact.html">Book Session</a></li>
+          <li><a href="contact.html">General Inquiry</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 WeWed. All rights reserved.</div>
+      <div>Designed with Framer aesthetics.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Tab switching script (initializes active states for styling)
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.pricing-tab');
+      const sections = document.querySelectorAll('.service-section');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          sections.forEach(s => s.classList.remove('active-service'));
+          
+          tab.classList.add('active');
+          
+          const targetId = tab.getAttribute('data-target');
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.classList.add('active-service');
+            // Re-trigger scroll animation check on tab switch
+            const animEls = targetSection.querySelectorAll('.animate-on-scroll');
+            animEls.forEach(el => el.classList.add('is-visible'));
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
