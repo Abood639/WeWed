@@ -121,6 +121,17 @@ html, body {
   transform: translateY(0) !important;
 }
 
+/* Black text border on all teal-coloured text */
+[style*="color: var(--accent-teal)"],
+[style*="color:var(--accent-teal)"] {
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+
 /* Global Layout & Container */
 header {
   position: fixed;
@@ -136,7 +147,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40px;
+  padding: 0 80px;
 }
 
 .logo {
@@ -326,9 +337,9 @@ nav a:hover, nav a.active {
 
 /* Card and Container Grid Layouts */
 .section-container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 96px 40px;
+  padding: 96px 80px;
   position: relative;
   z-index: 10;
 }
@@ -478,9 +489,9 @@ footer {
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 80px 80px;
   display: grid;
   grid-template-columns: 2fr repeat(3, 1fr);
   gap: 40px;
@@ -526,9 +537,9 @@ footer {
 }
 
 .footer-bottom {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 30px 40px;
+  padding: 30px 80px;
   border-top: 1px solid var(--hairline-soft);
   display: flex;
   justify-content: space-between;
