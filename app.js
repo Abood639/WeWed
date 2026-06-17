@@ -29,7 +29,7 @@ function initScrollAnimations() {
   elements.forEach(el => observer.observe(el));
 }
 
-// Spawns one large decorative background logo with flashing color gradient
+// Spawns scroll-interactive squiggly gradient paths in the background
 function initBackgroundSwans() {
   const bgCanvas = document.createElement('div');
   bgCanvas.className = 'bg-canvas';
@@ -41,7 +41,107 @@ function initBackgroundSwans() {
     <img src="swan-logo.jpg" alt="WeWed Logo" style="width: 100%; height: 100%; object-fit: contain;">
   `;
   bgCanvas.appendChild(logo);
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 1920 1080");
+  svg.setAttribute("fill", "none");
+  svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
+  svg.style.position = "absolute";
+  svg.style.width = "140%"; // Expanded to allow rotation without exposing edges
+  svg.style.height = "140%";
+  svg.style.top = "-20%";
+  svg.style.left = "-20%";
+  svg.style.pointerEvents = "none";
+  svg.style.transformOrigin = "center center";
+  svg.style.transition = "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)";
+  svg.style.willChange = "transform";
+
+  svg.innerHTML = `
+    <defs>
+      <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#F9DC37" />
+        <stop offset="100%" stop-color="#01F9C6" />
+      </linearGradient>
+    </defs>
+    <title>Background Gradient Paths</title>
+  `;
+
+  bgCanvas.appendChild(svg);
+
+  // Wavy path templates crossing the viewport area
+  const pathData = [
+    "M -100 150 C 400 -50, 800 450, 1300 200 C 1700 0, 1900 300, 2100 250",
+    "M -100 450 C 300 700, 700 250, 1100 600 C 1500 850, 1800 300, 2100 500",
+    "M -100 750 C 500 400, 900 1000, 1400 550 C 1700 300, 1900 900, 2100 800",
+    "M -100 1000 C 300 800, 600 1200, 1000 900 C 1400 600, 1700 1100, 2100 950"
+  ];
+
+  const paths = [];
+
+  pathData.forEach((d, idx) => {
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", d);
+    path.setAttribute("stroke", "url(#logo-gradient)");
+    path.setAttribute("stroke-width", "8");
+    path.setAttribute("stroke-linecap", "round");
+    path.setAttribute("stroke-linejoin", "round");
+    path.setAttribute("stroke-opacity", "0.25");
+    path.style.willChange = "stroke-dashoffset";
+
+    const segmentLength = 250 + idx * 50;
+    const gapLength = 300 + idx * 50;
+    path.setAttribute("stroke-dasharray", `${segmentLength} ${gapLength}`);
+    path.setAttribute("stroke-dashoffset", "0");
+
+    svg.appendChild(path);
+    paths.push({
+      element: path,
+      direction: idx % 2 === 0 ? 1 : -1,
+      baseSpeed: 0.5 + idx * 0.15
+    });
+  });
+
+  let scrollOffset = 0;
+  let scrollRotation = 0;
+  let lastScrollY = window.scrollY;
+
+  let idleOffset = 0;
+  let idleRotation = 0;
+
+  // Render loop combining idle drift and scroll-based motion
+  function animate() {
+    // Continuous subtle floating drift
+    idleOffset += 0.2;
+    idleRotation += 0.005;
+
+    // Apply combined transformations
+    const totalRotation = scrollRotation + idleRotation;
+    const totalOffset = scrollOffset + idleOffset;
+
+    svg.style.transform = `rotate(${totalRotation}deg)`;
+    paths.forEach(p => {
+      p.element.style.strokeDashoffset = `${totalOffset * p.direction * p.baseSpeed}`;
+    });
+
+    requestAnimationFrame(animate);
+  }
+
+  // Set up scroll event listener to update active target values
+  window.addEventListener('scroll', () => {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollY = Math.max(0, Math.min(window.scrollY, maxScroll));
+    const delta = scrollY - lastScrollY;
+    lastScrollY = scrollY;
+
+    // Drive motion based on scroll speed and direction
+    scrollOffset += delta * 1.2;
+    scrollRotation += delta * 0.04;
+  }, { passive: true });
+
+  // Start the frame animation loop
+  requestAnimationFrame(animate);
 }
+
 
 // Interactive cursor swan and ripple effect on click
 function initCursorSwan() {

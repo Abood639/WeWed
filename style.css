@@ -31,6 +31,10 @@ html, body {
   height: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
 /* Background floating scissors canvas */
 /* Background Large Logo Layout */
 .bg-canvas {
@@ -50,7 +54,8 @@ html, body {
 .bg-logo-large {
   width: min(70vw, 70vh, 500px);
   height: min(70vw, 70vh, 500px);
-  opacity: 1;
+  opacity: 0.75; /* Increased opacity for clear visibility */
+  mix-blend-mode: multiply; /* Transparent white background for JPEG */
   pointer-events: none;
   animation: bgLogoFloat 10s infinite ease-in-out;
   transform-origin: center;
@@ -60,7 +65,6 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  animation: bgLogoFlash 8s infinite linear;
 }
 
 @keyframes bgLogoFloat {
@@ -109,6 +113,7 @@ html, body {
 /* User Rules CSS for Scroll Animations */
 .animate-on-scroll {
   transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
+  will-change: transform, opacity;
 }
 
 .js .animate-on-scroll {
@@ -139,7 +144,9 @@ header {
   left: 0;
   width: 100%;
   height: 64px;
-  background: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, rgba(255, 253, 230, 0.85), rgba(212, 250, 241, 0.85), rgba(255, 240, 242, 0.85), rgba(255, 253, 230, 0.85));
+  background-size: 300% 300%;
+  animation: footerGradient 15s ease infinite;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--hairline);
@@ -148,6 +155,16 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 80px;
+}
+
+header .logo {
+  font-size: 36px;
+  letter-spacing: -2px;
+}
+
+header .logo img {
+  width: 48px !important;
+  height: 48px !important;
 }
 
 .logo {
@@ -180,7 +197,7 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 40px;
+  gap: 56px;
   align-items: center;
 }
 
@@ -483,10 +500,19 @@ textarea.form-input {
 /* Footer Section */
 footer {
   border-top: 1px solid var(--hairline-soft);
-  background: var(--canvas);
+  background: linear-gradient(135deg, #FFFDE6, #D4FAF1, #FFF0F2, #FFFDE6);
+  background-size: 300% 300%;
+  animation: footerGradient 15s ease infinite;
   position: relative;
   z-index: 10;
 }
+
+@keyframes footerGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 .footer-container {
   max-width: 1600px;
@@ -605,6 +631,14 @@ footer {
   header {
     padding: 0 20px;
   }
+  header .logo {
+    font-size: 24px;
+    letter-spacing: -1px;
+  }
+  header .logo img {
+    width: 32px !important;
+    height: 32px !important;
+  }
   nav {
     display: none; /* Add JS handler for mobile dropdown */
     position: absolute;
@@ -636,6 +670,9 @@ footer {
   .mobile-menu-btn {
     display: block;
   }
+  .section-container {
+    padding: 48px 20px;
+  }
   .grid-2, .grid-3 {
     grid-template-columns: 1fr;
   }
@@ -647,5 +684,149 @@ footer {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 30px;
+    padding: 48px 20px;
+  }
+  .footer-bottom {
+    padding: 20px 20px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* Animated Teal Border Glow */
+@keyframes borderGlowTeal {
+  0%, 100% {
+    border-color: rgba(1, 249, 198, 0.3);
+    box-shadow: 0 0 15px rgba(1, 249, 198, 0.05);
+  }
+  50% {
+    border-color: rgba(1, 249, 198, 0.95);
+    box-shadow: 0 0 25px rgba(1, 249, 198, 0.25);
+  }
+}
+
+.animated-border-teal {
+  border: 1px solid rgba(1, 249, 198, 0.3);
+  animation: borderGlowTeal 5s infinite ease-in-out;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animated-border-teal:hover {
+  transform: translateY(-4px);
+}
+
+/* Border Tracing Teal Animation */
+@keyframes borderRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.border-trace-teal {
+  position: relative;
+  border-radius: 20px;
+  padding: 1.5px; /* Border width */
+  overflow: hidden;
+  background: rgba(148, 163, 184, 0.1);
+  z-index: 1;
+}
+
+.border-trace-teal::before {
+  content: '';
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 400%;
+  height: 400%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 160deg,
+    #01F9C6 180deg,
+    transparent 200deg,
+    transparent 360deg
+  );
+  animation: borderRotate 6s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.border-trace-teal-inner {
+  position: relative;
+  background: var(--surface-1);
+  border-radius: 18.5px;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.border-trace-teal .card-surface {
+  border: none;
+  background: radial-gradient(circle at 0% 0%, rgba(1, 249, 198, 0.25) 0%, rgba(255, 255, 255, 0) 70%), var(--surface-1);
+}
+
+/* Timeline styling for journey details */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  margin: 40px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: var(--hairline);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -29px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-teal);
+  border: 3px solid var(--canvas);
+}
+
+.timeline-date {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-teal);
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+@media (min-width: 811px) {
+  .order-first-desktop {
+    order: -1;
+  }
+  .order-second-desktop {
+    order: 1;
+  }
+  .align-right-desktop {
+    align-items: flex-end;
+    text-align: right;
   }
 }

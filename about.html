@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WeWed - About Coach Lovey</title>
   <meta name="description" content="Learn about Coach Lovey's journey, combining 20 years of preventative care with relationship wellness techniques.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
   <style>
     .bio-quote {
       font-family: var(--font-display);
@@ -18,53 +18,6 @@
       margin-bottom: 24px;
     }
 
-    /* Timeline styling for journey details */
-    .timeline {
-      position: relative;
-      padding-left: 30px;
-      margin: 40px 0;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 8px;
-      top: 10px;
-      bottom: 10px;
-      width: 2px;
-      background: var(--hairline);
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 40px;
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -29px;
-      top: 6px;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--accent-teal);
-      border: 3px solid var(--canvas);
-    }
-
-    .timeline-date {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--accent-teal);
-      margin-bottom: 6px;
-      letter-spacing: -0.5px;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
-    }
 
     /* Article Card structure */
     .article-card {
@@ -109,19 +62,20 @@
   <section class="section-container" style="padding-top: 0;">
     <div class="grid-2">
       <div class="animate-on-scroll">
-        <h2 class="display-md" style="margin-bottom: 24px;">My Journey to Relational Wellness</h2>
-        <div class="bio-quote">"My passion for relationships didn't come from a textbook—it came from my own upbringing."</div>
-        <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Growing up around constant fighting, I knew early on that I wanted something different for my life. During my season of singleness, I went on a mission to discover what it truly takes to build a thriving, healthy marriage.</p>
-        <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6; margin-bottom: 24px;">Along the way, I saw so many couples staying in unhappy, draining dynamics simply because they were afraid of change, even when they knew the situation was bad for them.</p>
-        <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6;">Combining my 20 years of professional background in preventative care with a lifetime of studying what makes love actually work, I help couples stop settling for the status quo. My gift is seeing and feeling what is left unsaid, peeling back the layers to speak up for the parts of your relationship that have been buried.</p>
+        <div class="card-surface card-spotlight-teal animated-border-teal" style="padding: 40px; height: 100%;">
+          <h2 class="display-md" style="margin-bottom: 24px;">Why I Do This Work</h2>
+          <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Coach Lovey’s passion for relationships did not begin in a textbook. It came from lived experience, personal observation, and a deep desire to understand why people can love each other but still struggle to communicate, connect, and maintain emotional safety.</p>
+          <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6; margin-bottom: 20px;">Growing up around conflict gave her an early awareness of how much communication shapes relationships, homes, and personal identity. During her own season of singleness, she became intentional about studying what creates healthy love, strong partnership, and long-term relational stability.</p>
+          <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6; margin-bottom: 0;">That journey shaped the heart of WeWed: helping people connect with intention, prevent unnecessary breakdowns, and build healthier patterns for the future.</p>
+        </div>
       </div>
 
-      <div class="animate-on-scroll" style="padding-left: 20px;">
+      <div class="animate-on-scroll" style="padding-left: 20px; display: flex; flex-direction: column; justify-content: center;">
         <h3 class="display-md" style="font-size: 22px; margin-bottom: 20px;">Professional Timeline</h3>
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-date">Preventative Care Focus</div>
-            <p style="color: var(--ink-muted); font-size: 14px; line-height: 1.5;">Accumulated 20 years of clinical and wellness experience focusing on prevention—fixing root behaviors before damage occurs.</p>
+            <p style="color: var(--ink-muted); font-size: 14px; line-height: 1.5;">Accumulated 20 years of clinical and wellness experience focusing on prevention by fixing root behaviors before damage occurs.</p>
           </div>
           <div class="timeline-item">
             <div class="timeline-date">Marriage & Family Studies</div>
@@ -129,8 +83,58 @@
           </div>
           <div class="timeline-item">
             <div class="timeline-date">Establishment of WeWed</div>
-            <p style="color: var(--ink-muted); font-size: 14px; line-height: 1.5;">Created a bespoke Relational Wellness program combining prevention, maintenance, and intensive deep-dives.</p>
+            <p style="color: var(--ink-muted); font-size: 14px; line-height: 1.5;">Created a bespoke Relationship Support program combining prevention, maintenance, and intensive deep-dives.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who I Help Section -->
+  <section class="section-container" style="border-top: 1px solid var(--hairline-soft); padding-top: 80px; padding-bottom: 80px;">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h2 class="display-xl animate-on-scroll">Who I Help</h2>
+      <p class="subhead animate-on-scroll" style="margin: 0 auto; max-width: 700px;">WeWed supports singles, couples, and groups who want to communicate better, connect more intentionally, and build healthier relationship habits.</p>
+    </div>
+    
+    <div class="grid-3">
+      <!-- Singles -->
+      <div class="card-surface card-spotlight-teal animate-on-scroll" style="height: 100%;">
+        <div class="hero-tag" style="width: fit-content; margin-bottom: 16px;">Singles</div>
+        <h3 class="display-md" style="font-size: 24px; margin-bottom: 16px;">For Singles</h3>
+        <p style="color: var(--ink-muted); font-size: 15px; line-height: 1.6;">Dating clarity, personal boundaries, emotional reset, self-trust, communication patterns, and preparation for healthier connections.</p>
+      </div>
+
+      <!-- Couples -->
+      <div class="card-surface card-spotlight-yellow animate-on-scroll" style="height: 100%;">
+        <div class="hero-tag" style="width: fit-content; margin-bottom: 16px;">Couples</div>
+        <h3 class="display-md" style="font-size: 24px; margin-bottom: 16px;">For Couples</h3>
+        <p style="color: var(--ink-muted); font-size: 15px; line-height: 1.6;">Relationship maintenance, communication routines, conflict prevention, reconnection, expectation alignment, and creating a stronger foundation before small issues become repeated problems.</p>
+      </div>
+
+      <!-- Groups -->
+      <div class="card-surface card-spotlight-mix animate-on-scroll" style="height: 100%;">
+        <div class="hero-tag" style="width: fit-content; margin-bottom: 16px;">Groups</div>
+        <h3 class="display-md" style="font-size: 24px; margin-bottom: 16px;">For Groups</h3>
+        <p style="color: var(--ink-muted); font-size: 15px; line-height: 1.6;">Guided conversation, shared perspective, communication practice, and practical relationship tools in a supportive environment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I Work Section -->
+  <section class="section-container" style="border-top: 1px solid var(--hairline-soft); padding-top: 80px; padding-bottom: 80px;">
+    <div class="grid-2" style="align-items: stretch;">
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <div class="hero-tag animate-on-scroll" style="width: fit-content; margin-bottom: 16px;">Methodology</div>
+        <h2 class="display-xl animate-on-scroll" style="margin-bottom: 24px;">How I Work</h2>
+        <p class="subhead animate-on-scroll" style="margin-bottom: 0;">Coach Lovey’s coaching style is interactive, conversational, and deeply practical. Sessions are not just about talking through problems; they are designed to help clients see patterns, connect the dots, and apply what they learn in everyday life.</p>
+      </div>
+      
+      <div class="animate-on-scroll">
+        <div class="card-surface card-spotlight-teal animated-border-teal" style="padding: 40px; display: flex; flex-direction: column; gap: 24px; height: 100%;">
+          <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6; margin: 0;">She often uses relatable stories, parables, examples, and real-life scenarios to make communication and relationship concepts easier to understand. This approach helps clients feel seen, stay engaged, and walk away with language, tools, and perspective they can actually use.</p>
+          <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6; margin: 0;">Rather than simply giving advice, Coach Lovey guides clients through reflection, honest conversation, practical exercises, and intentional discussion. Her goal is to help clients understand what is happening beneath the surface, communicate more clearly, and move forward with confidence.</p>
+          <p style="color: var(--ink-muted); font-size: 16px; line-height: 1.6; margin: 0;">Her gift is noticing what is often left unsaid and helping clients put language to the thoughts, emotions, and patterns that may be affecting how they show up in relationships.</p>
         </div>
       </div>
     </div>
@@ -179,7 +183,6 @@
           <li><a href="services.html">Prevention & Maintenance</a></li>
           <li><a href="services.html">Communication Deep Dive</a></li>
           <li><a href="services.html">Group Cohorts</a></li>
-          <li><a href="services.html">Store Collection</a></li>
         </ul>
       </div>
       <div class="footer-column">
@@ -204,6 +207,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
