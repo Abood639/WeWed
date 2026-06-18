@@ -7,7 +7,7 @@
   --hairline: #e2e8f0;
   --hairline-soft: #edf2f7;
   --ink: #1a202c;
-  --ink-muted: #718096;
+  --ink-muted: #475569;
   --accent-teal: #01F9C6;
   --accent-yellow: #F9DC37;
   --btn-gradient: linear-gradient(135deg, #F9DC37, #01F9C6);
@@ -609,7 +609,7 @@ footer {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 200px;
+  max-height: 500px;
   margin-top: 16px;
 }
 

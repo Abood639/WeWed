@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initFAQ();
   initIframeWebhooks();
+  initContactScrollFix();
 });
 
 // Scroll animations utilizing IntersectionObserver
@@ -307,3 +308,22 @@ function initIframeWebhooks() {
     }
   });
 }
+
+// Counteract HighLevel iframe autofocus/scroll-stealing on page load
+function initContactScrollFix() {
+  if (window.location.pathname.includes('contact.html')) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        if (window.location.hash === '#faq') {
+          const faqSection = document.getElementById('faq');
+          if (faqSection) {
+            faqSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        } else {
+          window.scrollTo({ top: 0, behavior: 'instant' });
+        }
+      }, 300);
+    });
+  }
+}
+
