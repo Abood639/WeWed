@@ -311,18 +311,29 @@ function initIframeWebhooks() {
 
 // Counteract HighLevel iframe autofocus/scroll-stealing on page load
 function initContactScrollFix() {
-  if (window.location.pathname.includes('contact.html')) {
-    window.addEventListener('load', () => {
+  if (window.location.pathname.includes('contact')) {
+    let hasInteracted = false;
+    const stopFix = () => { hasInteracted = true; };
+    
+    // Stop correcting scroll position if the user starts interacting
+    window.addEventListener('wheel', stopFix, { passive: true });
+    window.addEventListener('touchmove', stopFix, { passive: true });
+    window.addEventListener('mousedown', stopFix, { passive: true });
+
+    // Execute at multiple interval thresholds to catch async iframe loading
+    const times = [50, 150, 300, 600, 1000, 1500, 2000, 2500, 3000];
+    times.forEach(delay => {
       setTimeout(() => {
+        if (hasInteracted) return;
         if (window.location.hash === '#faq') {
           const faqSection = document.getElementById('faq');
           if (faqSection) {
-            faqSection.scrollIntoView({ behavior: 'smooth' });
+            faqSection.scrollIntoView({ behavior: 'auto' });
           }
         } else {
           window.scrollTo({ top: 0, behavior: 'instant' });
         }
-      }, 300);
+      }, delay);
     });
   }
 }
