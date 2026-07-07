@@ -8,6 +8,90 @@
   <meta name="description" content="Reach out to book individual or couples relational coaching tracks, intensive deep-dives, or group waitlists.">
   <link rel="stylesheet" href="style.css?v=2">
   <link rel="icon" type="image/jpeg" href="swan-logo.jpg">
+  <style>
+    .contact-form-layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 40px;
+      text-align: left;
+    }
+
+    .form-selector-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .form-iframe-col {
+      flex: 2;
+      min-height: 720px;
+    }
+
+    .form-select-btn {
+      width: 100%;
+      background-color: var(--surface-1);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.16px;
+      border-radius: 12px;
+      padding: 18px 24px;
+      border: 1px solid var(--hairline);
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .form-select-btn:hover {
+      background-color: var(--surface-2);
+      transform: translateX(4px);
+    }
+
+    .form-select-btn .arrow-indicator {
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateX(-10px);
+    }
+
+    .form-select-btn.active .arrow-indicator {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Active States based on Theme colors */
+    .form-select-btn.active[data-color-theme="teal"] {
+      border-color: var(--accent-teal);
+      background: radial-gradient(circle at 0% 0%, rgba(1, 249, 198, 0.15) 0%, rgba(255, 255, 255, 0) 70%), var(--surface-2);
+      box-shadow: 0 0 15px rgba(1, 249, 198, 0.15);
+    }
+
+    .form-select-btn.active[data-color-theme="yellow"] {
+      border-color: var(--accent-yellow);
+      background: radial-gradient(circle at 0% 0%, rgba(249, 220, 55, 0.15) 0%, rgba(255, 255, 255, 0) 70%), var(--surface-2);
+      box-shadow: 0 0 15px rgba(249, 220, 55, 0.15);
+    }
+
+    .form-select-btn.active[data-color-theme="mix"] {
+      border-color: var(--accent-teal);
+      background: radial-gradient(circle at 0% 0%, rgba(1, 249, 198, 0.1) 0%, rgba(249, 220, 55, 0.1) 60%, rgba(255, 255, 255, 0) 80%), var(--surface-2);
+      box-shadow: 0 0 15px rgba(1, 249, 198, 0.1);
+    }
+
+    @media (max-width: 810px) {
+      .contact-form-layout {
+        flex-direction: column !important;
+      }
+      .form-select-btn:hover {
+        transform: translateY(-2px);
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Header Navigation -->
@@ -58,42 +142,34 @@
       </div>
     </div>
 
-    <!-- Interactive Booking/Contact Forms (Side-by-Side) -->
-    <div class="grid-3" style="max-width: 1400px; margin: 0 auto; gap: 20px;">
-      <!-- Individual Booking Card -->
-      <div class="card-surface card-spotlight-teal animate-on-scroll" style="padding: 12px; min-height: 700px;">
-        <h3 class="display-md" style="font-size: 20px; margin-bottom: 15px; text-align: center;">Individual Coaching</h3>
-        <iframe
-          src="https://links.wewedplus.com/widget/form/o4CqisZQlS3RFALK8i4p"
-          style="width: 100%; border: none; border-radius: 12px; min-height: 680px; background: transparent;"
-          id="inline-o4CqisZQlS3RFALK8i4p" 
-          data-embed-id="o4CqisZQlS3RFALK8i4p">
-        </iframe>
-        <script src="https://links.wewedplus.com/js/form_embed.js"></script>
+    <!-- Two-Column Form Selector and Embed -->
+    <div class="contact-form-layout animate-on-scroll">
+      <!-- Left Column: Form Selector Buttons (Vertically Aligned) -->
+      <div class="form-selector-col">
+        <button class="form-select-btn active" data-form-url="https://links.wewedplus.com/widget/form/o4CqisZQlS3RFALK8i4p" data-color-theme="teal">
+          Individual Coaching <span class="arrow-indicator">→</span>
+        </button>
+        <button class="form-select-btn" data-form-url="https://links.wewedplus.com/widget/form/CRDMHDWBlDYt9hwtUbcK" data-color-theme="yellow">
+          Couples Coaching <span class="arrow-indicator">→</span>
+        </button>
+        <button class="form-select-btn" data-form-url="https://links.wewedplus.com/widget/form/8SGqt4XkdgE5TqzM1raw" data-color-theme="mix">
+          Group Coaching <span class="arrow-indicator">→</span>
+        </button>
+        <button class="form-select-btn" data-form-url="https://links.wewedplus.com/widget/form/5LC88lzygLiRUmnqkgHz" data-color-theme="teal">
+          Request More Info <span class="arrow-indicator">→</span>
+        </button>
       </div>
 
-      <!-- Couples Booking Card -->
-      <div class="card-surface card-spotlight-yellow animate-on-scroll" style="padding: 12px; min-height: 700px;">
-        <h3 class="display-md" style="font-size: 20px; margin-bottom: 15px; text-align: center;">Couples Coaching</h3>
-        <iframe
-          src="https://links.wewedplus.com/widget/form/CRDMHDWBlDYt9hwtUbcK"
-          style="width: 100%; border: none; border-radius: 12px; min-height: 680px; background: transparent;"
-          id="inline-CRDMHDWBlDYt9hwtUbcK" 
-          data-embed-id="CRDMHDWBlDYt9hwtUbcK">
-        </iframe>
-        <script src="https://links.wewedplus.com/js/form_embed.js"></script>
-      </div>
-
-      <!-- Group Booking Card -->
-      <div class="card-surface card-spotlight-mix animate-on-scroll" style="padding: 12px; min-height: 700px;">
-        <h3 class="display-md" style="font-size: 20px; margin-bottom: 15px; text-align: center;">Group Coaching</h3>
-        <iframe
-          src="https://links.wewedplus.com/widget/form/8SGqt4XkdgE5TqzM1raw"
-          style="width: 100%; border: none; border-radius: 12px; min-height: 680px; background: transparent;"
-          id="inline-8SGqt4XkdgE5TqzM1raw" 
-          data-embed-id="8SGqt4XkdgE5TqzM1raw">
-        </iframe>
-        <script src="https://links.wewedplus.com/js/form_embed.js"></script>
+      <!-- Right Column: Interactive Iframe Container -->
+      <div class="form-iframe-col">
+        <div class="card-surface card-spotlight-teal" id="contact-form-card" style="padding: 20px; height: 100%; min-height: 700px; display: flex; flex-direction: column; justify-content: center;">
+          <iframe
+            src="https://links.wewedplus.com/widget/form/o4CqisZQlS3RFALK8i4p"
+            style="width: 100%; border: none; border-radius: 12px; min-height: 660px; background: transparent; flex-grow: 1;"
+            id="contact-iframe">
+          </iframe>
+          <script src="https://links.wewedplus.com/js/form_embed.js"></script>
+        </div>
       </div>
     </div>
   </section>
@@ -237,5 +313,38 @@
   </footer>
 
   <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const selectBtns = document.querySelectorAll('.form-select-btn');
+      const formIframe = document.getElementById('contact-iframe');
+      const formCard = document.getElementById('contact-form-card');
+
+      selectBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          selectBtns.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked button
+          btn.classList.add('active');
+
+          // Get URL and theme
+          const url = btn.getAttribute('data-form-url');
+          const theme = btn.getAttribute('data-color-theme');
+
+          // Update iframe src
+          formIframe.src = url;
+
+          // Update card spotlight theme classes
+          formCard.className = 'card-surface'; // Reset
+          if (theme === 'teal') {
+            formCard.classList.add('card-spotlight-teal');
+          } else if (theme === 'yellow') {
+            formCard.classList.add('card-spotlight-yellow');
+          } else if (theme === 'mix') {
+            formCard.classList.add('card-spotlight-mix');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
