@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <script>document.documentElement.classList.add('js')</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WeWed - Connect with Coach Lovey</title>
-  <meta name="description" content="Reach out to book individual or couples relational coaching tracks, intensive deep-dives, or group waitlists.">
+  <title>Book a Relationship Coaching Session | Contact WeWed</title>
+  <meta name="description" content="Get in touch with WeWed to book individual relationship coaching, couples clarity tracks, communication deep dives, or join intentional group cohorts.">
+  <link rel="canonical" href="https://wewedplus.com/contact">
   <link rel="stylesheet" href="style.css?v=2">
   <link rel="icon" type="image/jpeg" href="swan-logo.jpg">
   <style>
@@ -96,20 +97,20 @@
 <body>
   <!-- Header Navigation -->
   <header>
-    <a href="index.html" class="logo" id="header-logo">
+    <a href="/" class="logo" id="header-logo">
       <img src="swan-logo.jpg" alt="WeWed Logo" style="width: 32px; height: 32px; margin-right: 4px; object-fit: contain;">
       WeWed
     </a>
     <nav id="header-nav">
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="/">Home</a>
+        <a href="services">Services</a>
+        <a href="about">About</a>
+        <a href="contact" class="active">Contact</a>
         <a href="https://www.wewedplus.com/store">Store</a>
       </div>
       <div class="nav-ctas">
-        <a href="contact.html" class="btn-primary">Book Session</a>
+        <a href="contact" class="btn-primary">Book Session</a>
       </div>
     </nav>
   </header>
@@ -147,16 +148,16 @@
     <div class="contact-form-layout animate-on-scroll">
       <!-- Left Column: Form Selector Buttons (Vertically Aligned) -->
       <div class="form-selector-col">
-        <button class="form-select-btn active" data-form-url="https://links.wewedplus.com/widget/form/o4CqisZQlS3RFALK8i4p" data-color-theme="teal">
+        <button class="form-select-btn active" data-form-key="individual">
           Individual Coaching <span class="arrow-indicator">→</span>
         </button>
-        <button class="form-select-btn" data-form-url="https://links.wewedplus.com/widget/form/CRDMHDWBlDYt9hwtUbcK" data-color-theme="yellow">
+        <button class="form-select-btn" data-form-key="couples">
           Couples Coaching <span class="arrow-indicator">→</span>
         </button>
-        <button class="form-select-btn" data-form-url="https://links.wewedplus.com/widget/form/8SGqt4XkdgE5TqzM1raw" data-color-theme="mix">
+        <button class="form-select-btn" data-form-key="group">
           Group Coaching <span class="arrow-indicator">→</span>
         </button>
-        <button class="form-select-btn" data-form-url="https://links.wewedplus.com/widget/form/5LC88lzygLiRUmnqkgHz" data-color-theme="teal">
+        <button class="form-select-btn" data-form-key="info">
           Request More Info <span class="arrow-indicator">→</span>
         </button>
       </div>
@@ -164,12 +165,14 @@
       <!-- Right Column: Interactive Iframe Container -->
       <div class="form-iframe-col">
         <div class="card-surface card-spotlight-teal" id="contact-form-card" style="padding: 20px; height: 100%; min-height: 700px; display: flex; flex-direction: column; justify-content: center;">
-          <iframe
-            src="https://links.wewedplus.com/widget/form/o4CqisZQlS3RFALK8i4p"
-            style="width: 100%; border: none; border-radius: 12px; min-height: 660px; background: transparent; flex-grow: 1;"
-            id="contact-iframe">
-          </iframe>
-          <script src="https://links.wewedplus.com/js/form_embed.js"></script>
+          <div id="form-container" style="width: 100%; height: 100%; display: flex; flex-direction: column; flex-grow: 1;">
+            <iframe
+              src="https://links.wewedplus.com/widget/form/o4CqisZQlS3RFALK8i4p"
+              style="width: 100%; border: none; border-radius: 12px; min-height: 660px; background: transparent; flex-grow: 1;"
+              id="contact-iframe">
+            </iframe>
+            <script src="https://links.wewedplus.com/js/form_embed.js"></script>
+          </div>
         </div>
       </div>
     </div>
@@ -277,7 +280,7 @@
   <footer>
     <div class="footer-container">
       <div class="footer-info">
-        <a href="index.html" class="logo" id="footer-logo">
+        <a href="/" class="logo" id="footer-logo">
           <img src="swan-logo.jpg" alt="WeWed Logo" style="width: 32px; height: 32px; margin-right: 4px; object-fit: contain;">
           WeWed
         </a>
@@ -286,24 +289,24 @@
       <div class="footer-column">
         <h4>Services</h4>
         <ul>
-          <li><a href="services.html#prevention-maintenance">Prevention & Maintenance</a></li>
-          <li><a href="services.html#communication-dive">Communication Deep Dive</a></li>
-          <li><a href="services.html#group-cohorts">Community Conversation</a></li>
+          <li><a href="services#prevention-maintenance">Prevention & Maintenance</a></li>
+          <li><a href="services#communication-dive">Communication Deep Dive</a></li>
+          <li><a href="services#group-cohorts">Community Conversation</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h4>About</h4>
         <ul>
-          <li><a href="about.html">Coach Lovey</a></li>
-          <li><a href="about.html#articles">Insights & Articles</a></li>
+          <li><a href="about">Coach Lovey</a></li>
+          <li><a href="about#articles">Insights & Articles</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h4>Connect</h4>
         <ul>
-          <li><a href="services.html">Book Session</a></li>
-          <li><a href="contact.html">General Inquiry</a></li>
-          <li><a href="index.html#faq">FAQs</a></li>
+          <li><a href="services">Book Session</a></li>
+          <li><a href="contact">General Inquiry</a></li>
+          <li><a href="/#faq">FAQs</a></li>
         </ul>
       </div>
     </div>
@@ -317,32 +320,100 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const selectBtns = document.querySelectorAll('.form-select-btn');
-      const formIframe = document.getElementById('contact-iframe');
+      const formContainer = document.getElementById('form-container');
       const formCard = document.getElementById('contact-form-card');
+
+      const forms = {
+        'individual': {
+          type: 'standard',
+          url: 'https://links.wewedplus.com/widget/form/o4CqisZQlS3RFALK8i4p',
+          theme: 'teal'
+        },
+        'couples': {
+          type: 'standard',
+          url: 'https://links.wewedplus.com/widget/form/CRDMHDWBlDYt9hwtUbcK',
+          theme: 'yellow'
+        },
+        'group': {
+          type: 'standard',
+          url: 'https://links.wewedplus.com/widget/form/8SGqt4XkdgE5TqzM1raw',
+          theme: 'mix'
+        },
+        'info': {
+          type: 'custom',
+          url: 'https://links.wewedplus.com/widget/form/klAGYXHVkwJ9FdGS3ySF',
+          theme: 'teal',
+          attributes: {
+            id: 'inline-klAGYXHVkwJ9FdGS3ySF',
+            'data-layout': "{'id':'INLINE'}",
+            'data-trigger-type': 'alwaysShow',
+            'data-trigger-value': '',
+            'data-activation-type': 'alwaysActivated',
+            'data-activation-value': '',
+            'data-deactivation-type': 'neverDeactivate',
+            'data-deactivation-value': '',
+            'data-form-name': 'WeWed QR Form',
+            'data-height': '992',
+            'data-layout-iframe-id': 'inline-klAGYXHVkwJ9FdGS3ySF',
+            'data-form-id': 'klAGYXHVkwJ9FdGS3ySF',
+            title: 'WeWed QR Form'
+          }
+        }
+      };
+
+      function loadForm(formKey) {
+        const config = forms[formKey];
+        if (!config) return;
+
+        // Clear container
+        formContainer.innerHTML = '';
+
+        // Create iframe
+        const iframe = document.createElement('iframe');
+        iframe.src = config.url;
+
+        if (config.type === 'custom') {
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.border = 'none';
+          iframe.style.borderRadius = '4px';
+          for (const [key, val] of Object.entries(config.attributes)) {
+            iframe.setAttribute(key, val);
+          }
+        } else {
+          iframe.style.width = '100%';
+          iframe.style.border = 'none';
+          iframe.style.borderRadius = '12px';
+          iframe.style.minHeight = '660px';
+          iframe.style.background = 'transparent';
+          iframe.style.flexGrow = '1';
+          iframe.id = 'contact-iframe';
+        }
+
+        formContainer.appendChild(iframe);
+
+        // Load embed script
+        const script = document.createElement('script');
+        script.src = 'https://links.wewedplus.com/js/form_embed.js';
+        formContainer.appendChild(script);
+
+        // Update card spotlight theme classes
+        formCard.className = 'card-surface'; // Reset
+        if (config.theme === 'teal') {
+          formCard.classList.add('card-spotlight-teal');
+        } else if (config.theme === 'yellow') {
+          formCard.classList.add('card-spotlight-yellow');
+        } else if (config.theme === 'mix') {
+          formCard.classList.add('card-spotlight-mix');
+        }
+      }
 
       selectBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-          // Remove active class from all buttons
           selectBtns.forEach(b => b.classList.remove('active'));
-          // Add active class to clicked button
           btn.classList.add('active');
-
-          // Get URL and theme
-          const url = btn.getAttribute('data-form-url');
-          const theme = btn.getAttribute('data-color-theme');
-
-          // Update iframe src
-          formIframe.src = url;
-
-          // Update card spotlight theme classes
-          formCard.className = 'card-surface'; // Reset
-          if (theme === 'teal') {
-            formCard.classList.add('card-spotlight-teal');
-          } else if (theme === 'yellow') {
-            formCard.classList.add('card-spotlight-yellow');
-          } else if (theme === 'mix') {
-            formCard.classList.add('card-spotlight-mix');
-          }
+          const formKey = btn.getAttribute('data-form-key');
+          loadForm(formKey);
         });
       });
     });
