@@ -692,6 +692,18 @@ footer {
     gap: 10px;
     text-align: center;
   }
+  .pricing-tabs {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 16px;
+    padding: 6px;
+    gap: 6px;
+  }
+  .pricing-tab {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+  }
 }
 
 /* Animated Teal Border Glow */
