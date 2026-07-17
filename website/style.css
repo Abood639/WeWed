@@ -574,6 +574,21 @@ footer {
   color: var(--ink-muted);
 }
 
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--ink-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--ink);
+}
+
 /* Accordion FAQs */
 .faq-list {
   max-width: 800px;
